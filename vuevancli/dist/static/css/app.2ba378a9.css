@@ -1,0 +1,59 @@
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mobile-switch-lang {
+  position: absolute;
+  top: 0;
+  right: 0.55556rem;
+  overflow: hidden;
+  color: #ff0000;
+  font-size: 0.33333rem;
+  cursor: pointer;
+}
+.mobile-switch-lang span {
+  display: inline-block;
+  width: 1.33333rem;
+  color: #333333;
+  line-height: 0.61111rem;
+  text-align: center;
+  background-color: #fff;
+}
+.mobile-switch-lang span:first-child {
+  border-right: none;
+  border-radius: 0.08333rem 0 0 0.08333rem;
+}
+.mobile-switch-lang span:last-child {
+  border-left: none;
+  border-radius: 0 0.08333rem 0.08333rem 0;
+}
+.mobile-switch-lang span.active {
+  color: #ffffff;
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+#nav {
+  padding: 0.83333rem;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+h3[data-v-469af010] {
+  margin: 1.11111rem 0 0;
+}
+.hello[data-v-469af010] {
+  font-family: "FZZhiATJW";
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  font-family: "SourceHanSansCN-Medium;";
+  background: #ffffff;
+}
+

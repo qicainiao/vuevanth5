@@ -1,9 +1,11 @@
 .DS_Store
 node_modules
-/dist
+
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
+
+/src/assets/font
 
 # local env files
 .env.local

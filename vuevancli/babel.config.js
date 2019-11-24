@@ -6,7 +6,7 @@ module.exports = {
     ['import', {
       libraryName: 'juanziaaa',
       libraryDirectory: 'es',
-      style: true
+      style: name => `${name}/style/less`
     }, 'juanziaaa']
   ]
 }

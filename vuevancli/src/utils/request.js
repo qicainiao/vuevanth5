@@ -1,4 +1,4 @@
-import axios from 'axios'
+import Axios from 'axios'
 import {navigate} from '../utils'
 import { Toast } from 'juanziaaa'
 import { getToken } from '@/utils/auth'
@@ -7,9 +7,16 @@ import { getToken } from '@/utils/auth'
 
 // axios.defaults.headers.common['Authorization'] = Authorization //Authorization;
 // axios.defaults.headers.common['token'] = Authorization
-axios.defaults.headers.common['token'] = localStorage.getItem('token')
-axios.defaults.timeout = 60000
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+const axios = Axios.create({
+  baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
+  // withCredentials: true, // send cookies when cross-domain requests
+  timeout: 6000, // request timeout
+  headers: { 
+     'token':getToken(),
+    'Content-Type': 'application/x-www-form-urlencoded'} //application/x-www-form-urlencoded
+})
+
 // code状态码200判断
 axios.interceptors.request.use(
   function(config) {

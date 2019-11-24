@@ -15,8 +15,8 @@ module.exports = {
     productionSourceMap: false,
     // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
     // webpack配置
-    chainWebpack: (config) => {
-    },
+    // chainWebpack: (config) => {
+    // },
     configureWebpack: (config) => {
         if (process.env.NODE_ENV === 'production') {
             // 为生产环境修改配置...
@@ -46,29 +46,34 @@ module.exports = {
         sourceMap: false, // 开启 CSS source maps?
         loaderOptions: {
             css: {}, // 这里的选项会传递给 css-loader
-            postcss: {} // 这里的选项会传递给 postcss-loader
+            postcss: {}, // 这里的选项会传递给 postcss-loader
+            less: {
+                modifyVars: {
+                  '@blue': '#4285F4',
+                  'text-color': '#6D6D6D'
+                }
+              }
         }, // css预设器配置项 详见https://cli.vuejs.org/zh/config/#css-loaderoptions
         modules: false // 启用 CSS modules for all css / pre-processor files.
     },
-
-    devServer: {
-        open: process.platform === 'darwin',
-        host: '0.0.0.0', // 允许外部ip访问
-        port: 8022, // 端口
-        https: false, // 启用https
-        overlay: {
-            warnings: true,
-            errors: true
-        }, // 错误、警告在页面弹出
-        proxy: {
-            '/api': {
-                target: 'http://www.baidu.com/api',
-                changeOrigin: true, // 允许websockets跨域
-                // ws: true,
-                pathRewrite: {
-                    '^/api': ''
-                }
-            }
-        } // 代理转发配置，用于调试环境
-    }
+    // devServer: {
+    //     open: process.platform === 'darwin',
+    //     host: '0.0.0.0', // 允许外部ip访问
+    //     port: 8022, // 端口
+    //     https: false, // 启用https
+    //     overlay: {
+    //         warnings: true,
+    //         errors: true
+    //     }, // 错误、警告在页面弹出
+    //     proxy: {
+    //         '/api': {
+    //             target: 'http://www.baidu.com/api',
+    //             changeOrigin: true, // 允许websockets跨域
+    //             // ws: true,
+    //             pathRewrite: {
+    //                 '^/api': ''
+    //             }
+    //         }
+    //     } // 代理转发配置，用于调试环境
+    // }
 }

@@ -1,0 +1,29 @@
+.container[data-v-3c9a7938] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding-left: 0.55556rem;
+  padding-right: 0.55556rem;
+}
+.container span[data-v-3c9a7938] {
+  font-family: SourceHanSansCN-Regular;
+  margin-top: 0.72222rem;
+}
+.container span[data-v-3c9a7938]:first-child {
+  font-size: 0.55556rem;
+  color: #4285F4;
+}
+.container span[data-v-3c9a7938]:last-child {
+  font-size: 0.38889rem;
+  color: #6D6D6D;
+  line-height: 0.55556rem;
+}
+
